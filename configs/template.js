@@ -15,8 +15,13 @@
             token: "YOUR_OAUTH_TOKEN",
             webhookSecret: 'SECRET'
         },
+        db: {
+            sqlite: {
+                name: "database",
+            },
+        },
         mocks: {
-            twitter: true
+            twitter: true,
         },
         features: {
             twitter: false,
@@ -28,6 +33,13 @@
             channel: '#botwillacceptanything',
         },
         */
+       voting: {
+         period: 15,
+         period_jitter: 0.2,
+         minVotes: 8,
+         supermajority: 0.65,
+         pollInterval: 3, // Minutes
+       },
 
     };
 }());
